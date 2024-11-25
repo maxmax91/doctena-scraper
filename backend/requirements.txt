@@ -1,0 +1,4 @@
+requests
+fastapi[standard]
+pywin32
+PyGetWindow==0.0.9

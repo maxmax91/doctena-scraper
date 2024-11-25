@@ -33,6 +33,18 @@ class User(BaseModel):
     telephone: str
     bsn: str
 
+
+def test():
+    user = User( title='mr',
+                lastName='cognome', 
+                firstName='nome',
+                gender='m',
+                language='it',
+                patientBirthday='31/05/991'
+                
+                )
+    pass
+
 @app.post("/send")
 async def root( user: User ):
     print(user)
@@ -42,6 +54,9 @@ async def root( user: User ):
 
     shell = win32com.client.Dispatch("WScript.Shell")
     win32api.Sleep(100)
+
+    win32api.Sleep(100)
+    shell.SendKeys("{LEFT}")
 
     win32api.Sleep(100)
     shell.SendKeys("{LEFT}")
